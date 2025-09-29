@@ -1,11 +1,13 @@
+# NAME: VEERESH V
+# REG.NO : 212224210025
+
 # EXP-03-Implement-Breadth-First-Search-Traversal-of-a-Graph
-Breadth First Search Traversal of a Graph
+# Breadth First Search Traversal of a Graph
 
-
-AIM: 
-Theory: 
+# AIM: 
 To Implement Breadth First Search Traversal of a Graph using Python 3. 
 
+# Theory:
 Breadth-First Traversal (or Search) for a graph is like the Breadth-First Traversal of a tree. 
 The only catch here is that, unlike trees, graphs may contain cycles so that we may come to the same 
 node again. To avoid processing a node more than once, we divide the vertices into two categories: 
@@ -13,12 +15,12 @@ node again. To avoid processing a node more than once, we divide the vertices in
 2. Not visited. 
 A Boolean visited array is used to mark the visited vertices. For simplicity, it is assumed that all 
 vertices are reachable from the starting vertex. BFS uses a queue data structure for traversal. 
-How does BFS work? 
+# How does BFS work? 
 Starting from the root, all the nodes at a particular level are visited first, and then the next level 
 nodes are traversed until all the nodes are visited. 
 To do this, a queue is used. All the adjacent unvisited nodes of the current level are pushed into the 
 queue, and the current-level nodes are marked visited and popped from the queue. 
-Illustration: 
+# Illustration: 
 Let us understand the working of the algorithm with the help of the following example. 
 Step1: Initially queue and visited arrays are empty.
 <img width="681" height="286" alt="image" src="https://github.com/user-attachments/assets/5872b545-43d7-4b7a-8d53-fc3b06287d2d" />
@@ -62,14 +64,15 @@ As we can see that every neighbours of node 4 are visited, so move to the next n
 front of the queue. 
 Remove node 4 from the front of queue and visit the unvisited neighbours and push them into queue. 
 Now, Queue becomes empty, So, terminate these process of iteration. 
-Algorithm: 
+# Algorithm: 
 1. Construct a Graph with Nodes and Edges 
 2. Breadth First Uses Queue and iterates through the Queue for Traversal. 
 3. Insert a Start Node into the Queue. 
 4. Find its Successors Or neighbors and Check whether the node is visited or not. 
 5. If Not Visited, add it to the Queue. Else Continue. 
 6. Iterate steps 4 and 5 until all nodes get visited, and there are no more unvisited nodes. 
-Program: 
+# Program: 
+```
 from collections import deque 
 from collections import defaultdict 
 ''' 
@@ -111,14 +114,24 @@ start = '0'
 path = [] 
 visited = defaultdict(bool) 
 traversedpath = bfs(graph,start,visited,path) 
-print(traversedpath) 
-Sample Input : 
+print(traversedpath)
+```
+
+# Sample Input : 
+```
 5 6 
 0 1 
 0 2 
 1 2 
 1 3 
 2 4 
-3 4 
-Sample Output: 
-['0', '1', '2', '3', '4'] 
+3 4
+```
+
+# Sample Output: 
+```
+['0', '1', '2', '3', '4']
+```
+
+# Result:
+Thus,a Graph was constructed and implementation of Breadth First Search for the same graph was done successfully.
